@@ -12,5 +12,132 @@
   --border-color: #bfc4d9;
 
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Syne", sans-serif;
+}
+
+/*========== Base ==========*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background: url("../image/bg-image.png") no-repeat center/cover;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*========== Navbar ==========*/
+
+.header {
+  background-color: var(--body-color);
+  box-shadow: 0 2px 16px #14298f26;
+  position: relative;
+}
+
+.navbar {
+  max-width: 80%;
+  height: 85px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 14px;
+  color: var(--title-color);
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  transition: all 0.8s;
+}
+
+.menu li a {
+  color: var(--title-color);
+  font-family: var(--body-font);
+  font-weight: 600;
+}
+
+.menu li a:hover {
+  color: var(--first-color);
+}
+
+.icons {
+  display: inline-flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.icons div i {
+  font-size: 20px;
+}
+
+.icons div i:hover {
+  color: var(--first-color);
+}
+
+.icons div:nth-child(3) {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--body-color);
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .menu.active {
+    max-height: 400px;
+    opacity: 1;
+  }
+
+  .menu li:first-child {
+    padding-top: 30px;
+  }
+
+  .menu li:last-child {
+    padding-bottom: 30px;
+  }
+
+  .icons div:nth-child(3) {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu li a {
+    font-size: 18px;
+  }
+
+  .icons i {
+    font-size: 18px;
+  }
 }

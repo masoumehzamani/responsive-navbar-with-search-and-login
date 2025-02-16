@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Responsive navbar with search and login</title>
+
     <!-- Remix Icons -->
     <link
       rel="stylesheet"
@@ -14,6 +15,32 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <h3>Logo</h3>
+        </div>
+
+        <div class="options">
+          <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Featured</a></li>
+            <li><a href="#">Contact Me</a></li>
+          </ul>
+
+          <div class="icons">
+            <div><i class="ri-search-line"></i></div>
+            <div><i class="ri-user-line"></i></div>
+            <div class="toggle" onclick="toggleMenu()">
+              <i class="ri-menu-line"></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
   </body>
