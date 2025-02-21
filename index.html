@@ -15,6 +15,20 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <div class="overlay">
+      <div onclick="closeOverlay()" class="close">
+        <i class="ri-close-line"></i>
+      </div>
+
+      <div class="form-container">
+        <form class="search-form" action="#">
+          <div class="search-input">
+            <i class="ri-search-line"></i>
+            <input type="search" placeholder="What are you looking for?" />
+          </div>
+        </form>
+      </div>
+    </div>
     <header class="header">
       <nav class="navbar">
         <div class="logo">
@@ -31,8 +45,12 @@
           </ul>
 
           <div class="icons">
-            <div><i class="ri-search-line"></i></div>
-            <div><i class="ri-user-line"></i></div>
+            <div class="search" onclick="showSearch()">
+              <i class="ri-search-line"></i>
+            </div>
+            <div class="profile">
+              <i class="ri-user-line"></i>
+            </div>
             <div class="toggle" onclick="toggleMenu()">
               <i class="ri-menu-line"></i>
             </div>
