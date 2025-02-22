@@ -27,6 +27,31 @@
             <input type="search" placeholder="What are you looking for?" />
           </div>
         </form>
+
+        <form class="login-form" action="#">
+          <div class="title">Log In</div>
+
+          <div class="input-group">
+            <div class="input-field">
+              <label for="">Email</label>
+              <input type="email" placeholder="Write your email" />
+            </div>
+
+            <div class="input-field">
+              <label for="">Password</label>
+              <input type="password" placeholder="Enter your password" />
+            </div>
+          </div>
+
+          <p class="text">
+            You do not have an account? <a href="#">Sign up</a>
+          </p>
+          <p class="pass">
+            <a href="#">You forgot your password</a>
+          </p>
+
+          <button class="btn">Log In</button>
+        </form>
       </div>
     </div>
     <header class="header">
@@ -48,7 +73,7 @@
             <div class="search" onclick="showSearch()">
               <i class="ri-search-line"></i>
             </div>
-            <div class="profile">
+            <div class="profile" onclick="showForm()">
               <i class="ri-user-line"></i>
             </div>
             <div class="toggle" onclick="toggleMenu()">

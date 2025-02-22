@@ -42,7 +42,6 @@ input {
 }
 
 /*========== Navbar ==========*/
-
 .header {
   background-color: var(--body-color);
   box-shadow: 0 2px 16px #14298f26;
@@ -104,6 +103,7 @@ input {
   display: none;
 }
 
+/*========== Overlay ==========*/
 .overlay {
   position: fixed;
   top: 0;
@@ -135,15 +135,15 @@ input {
 
 .form-container {
   min-width: 300px;
-  max-width: 450px;
+  max-width: 420px;
   width: 90%;
   position: absolute;
   top: 160px;
   left: 50%;
   transform: translateX(-50%);
-  text-align: center;
 }
 
+/*========== Search Form ==========*/
 .form-container .search-form {
   transform: translateY(-30%);
   opacity: 0;
@@ -158,6 +158,7 @@ input {
 }
 
 .form-container .search-form .search-input {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -178,6 +179,86 @@ input {
   font-family: var(--body-font);
   font-size: 16px;
   color: var(--text-color);
+}
+
+/*========== Login Form ==========*/
+.form-container .login-form {
+  width: 100%;
+  background-color: var(--container-color);
+  box-shadow: 0 8px 32px #0a134333;
+  border-radius: 12px;
+  font-family: var(--body-font);
+  padding: 35px 30px;
+  margin-top: -55px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5%);
+  transition: all 0.4s ease-in-out;
+}
+
+.form-container .login-form.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.form-container .login-form .title {
+  font-size: 25px;
+  color: var(--title-color);
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-container .login-form .input-group {
+  text-align: left;
+}
+
+.form-container .login-form .input-group label {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.form-container .login-form .input-group input {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid var(--border-color);
+  padding: 18px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: var(--body-font);
+  color: var(--text-color);
+}
+
+.form-container .login-form .text {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.form-container .login-form .text a {
+  color: var(--first-color);
+}
+
+.form-container .login-form .pass a {
+  color: var(--first-color);
+  display: block;
+  text-align: center;
+}
+
+.form-container .login-form .btn {
+  display: block;
+  width: 100%;
+  background-color: var(--first-color);
+  color: #fff;
+  font-family: var(--body-font);
+  border: none;
+  margin-top: 20px;
+  padding: 18px 0;
+  font-size: 18px;
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 1024px) {
