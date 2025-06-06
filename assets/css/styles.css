@@ -1,1 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+
+:root {
+  /*=== Colors ===*/
+  --body-color: #f5f7ff;
+  --title-color: #0a1343;
+
+  /*=== Fonts ===*/
+  --body-font: "Syne", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url(../image/bg-image.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: var(--body-font);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background-color: var(--body-color);
+  height: 5.5rem;
+  box-shadow: 0 2px 16px #14298f26;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 8rem;
+}
+
+.logo {
+  color: var(--title-color);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+nav .list {
+  display: flex;
+  gap: 45px;
+  align-items: center;
+}
+
+.list .menu {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.list .menu a {
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+.btns {
+  display: flex;
+  gap: 20px;
+}
+
+.btns span i {
+  font-size: 1.25rem;
+}
+
+.btns span:last-child {
+  display: none;
+}
+
+/* @media screen and (max-width: 1022px) {
+  nav {
+    height: 3.5rem;
+  }
+} */
